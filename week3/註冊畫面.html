@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>註冊畫面</title>
+    </head>
+    <body>
+        <div>
+            <h1>Sign Up</h1>
+        </div>
+        <form action="action_page.php">
+            <div>
+                <p>姓名</p>
+                <input type="texe" placeholder="請輸入姓名"/>
+                <p>帳號</p>
+                <input type="text" placeholder="請輸入帳號"/>
+                <p>密碼</p>
+                <input type="password" placeholder="6 ~ 8位數，區分大小寫"/>
+                <p>電子郵件</p>
+                <input type="email" placeholder="example@abcd.com"/>
+                <P>性別</P>
+                <input type="radio" id="Male" name="Gender" value="Male"/>
+                <label for="Male">男性</label>
+                <input type="radio" id="Female" name="Gender" value="Female"/>
+                <label for="Female">女性</label>
+                <input type="radio" id="The Third Gender" name="Gender" value="The Third Gender"/>
+                <label for="The Third Gender">其他</label>
+                <input type="radio" id="Secret" name="Gender" value="Secret"/>
+                <label for="Secret">不願透漏</label>
+                <P>生日</P>
+                <input type="date"/>
+                <br/>
+                <label for="blood">血型</label>
+                <br/>
+                <select name="blood" id="blood">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="AB">AB</option>
+                    <option value="O">O</option>
+                </select>
+                <P>喜歡的顏色</P>
+                <input type="color"/>
+                <P>電話號碼</P>
+                <input type="tel" placeholder="請輸入電話號碼"/>
+                <P>訂閱</P>
+                <input type="checkbox"/>
+                <P>上傳附件</P>
+                <input type="file"/>
+                <P>自我介紹</P>
+                <textarea placeholder="我是XXX，我的興趣是YYY..."></textarea>
+                <br/>
+                <br/>
+                <input type="submit" value="Submit"/>
+            </div>
+        </form>
+        
+    </body>
+</html>
