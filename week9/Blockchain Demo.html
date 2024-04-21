@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Blockchain Demo</title>
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+    <div class="topbar">
+        <p>Blockchain Demo</p>
+    </div>
+
+    <div class="content">
+        <div class="data">
+            <!-- &nbsp;   -> 普通的空白
+                 &thinsp; -> 1/6個中文字寬 -->
+            <label>Data：&nbsp;&thinsp;</label>
+            <div>
+                <textarea rows="15" cols="100"></textarea>
+            </div>
+        </div>
+
+        </br>
+
+        <div class="hash">
+            <label>Hash：&nbsp;</label>
+            <div>
+                <textarea disabled class="output-box" id="output" rows="1" cols="100"></textarea>
+            </div>
+        </div>
+        
+        </br>
+
+        <button onclick="copyContent()">Copy Content</button>
+        
+        <script src="sha.js"></script>
+        <script>
+            // hash('foo').then((hex) => console.log(hex));
+            async function main() {
+                let hex = await hash('foo');
+                console.log(hex);
+                document.getElementById('output').value = hex;
+            }
+
+            main();
+
+            document.querySelector('.data textarea').addEventListener('input', async function() {
+                let text = this.value;
+                let hex = await hash(text);
+                document.getElementById('output').value = hex;
+            });
+
+
+            function copyContent() {
+                const outputElement = document.getElementById('output');
+                const range = document.createRange();
+                range.selectNode(outputElement);
+                window.getSelection().removeAllRanges();
+                window.getSelection().addRange(range);
+                document.execCommand('copy');
+                window.getSelection().removeAllRanges();
+                alert('Content copied to clipboard!');
+            }
+        </script>
+    </div>
+</body>
+</html>
