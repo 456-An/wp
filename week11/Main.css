@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    align-items: flex-start;
+}
+
+#canvas1, #canvas2, #canvas3 {
+    margin-right: 50px;
+    border: 5px solid black;
+}
+
+button {
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    margin-top: 30px;
+    border-radius: 20px;
+    border-style: none;
+    width: 150px;
+    height: 100px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
