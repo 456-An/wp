@@ -1,0 +1,58 @@
+* {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    font-size: 26px;
+    text-align: center;
+    width: 95%;
+    display: block;
+    margin:10px auto;
+}
+
+nav, main {
+    width: 95%;
+    display: block;
+    margin:10px auto;
+}
+
+.info {
+    font-size: 105%;
+    margin: 50px;
+}
+
+#menu {
+    float:right;
+}
+
+#template {
+    height: 500px;
+}
+
+span, button, select, input, textarea {
+    border-radius: 5px;
+    color: #666666;
+    border: 1px solid #cccccc;
+    padding: 5px;
+}
+
+textarea {
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+    height: 10em;
+    padding: 10px;
+}
+
+div {
+    display:block;
+    width:100%;
+    margin:10px auto;
+    height: 200px;
+    padding: 10px;
+}
+
+#question {
+    height: 5em;
+}
