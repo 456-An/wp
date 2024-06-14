@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<hmtl lang="zh-TW">
+    <head>
+        <meta charset="UTF-8">
+        <title>Groq應用</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <header>
+            <h1>Groq大語言模型</h1>
+        </header>
+        <div class="info">
+            <p class="p1">以下是應用範圍
+                <ul>
+                    <li><strong>知識王（幫您解決生活上所有煩惱）</strong></li>
+                    <li><strong>秘書（幫您紀錄待辦事項）</strong></li>
+                </ul>
+            </p>
+            <p class="p2">
+                <h2>使用說明：<br></h2>
+                您可以使用<strong>任何語言</strong>詢問<strong>任何問題</strong>，AI會協助解決問題。如果想得到特定語言的回答，只需要在後面加上<strong>〝請用XXX語言回答〞</strong>即可。<br>
+                如果想要<strong>紀錄</strong>待辦事項，請先輸入<strong>〝添加待辦事項〞</strong>，然後再輸入您要添加的待辦事項。<br>
+                如果想要<strong>查詢</strong>待辦事項，請輸入<strong>〝列出待辦事項〞</strong>即可。<br>
+                如果想要<strong>刪除</strong>待辦事項，請先輸入<strong>〝刪除待辦事項〞</strong>，然後再輸入剛剛打得待辦事項。<strong>注意！！</strong><mark><strong>格式</strong></mark>要一致。<br>
+                例如：添加待辦事項 6/21 期末結束，刪除待辦事項請輸入〝刪除待辦事項 6/21 期末結束〞，6/21前面有一個空白不能省略！！！
+            </p>
+        </div>
+        <br>
+        <br>
+        <nav>
+            <select id="menu">
+                <option value="開始使用">開始使用</option>
+                <option value="停止使用">停止使用</option>
+            </select>
+        </nav>
+        <main>
+            <textarea id="question" placeholder="請輸入您的問題...AI會協助您解決問題"></textarea>
+            <button onclick="chat()">送出問題</button>
+            
+            <div id="response"></div>
+        </main>
+        <script src="main.js"></script>
+    </body>
+</hmtl>
